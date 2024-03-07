@@ -101,7 +101,7 @@ button {
   position: sticky;
   top: 0;
   background-color: #202c45;
-  padding: 1.2rem 2rem;
+  padding: 0.4rem 2rem;
   display: flex;
 }
 .navbar {
