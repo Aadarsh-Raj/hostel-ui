@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 0;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+button {
+  cursor: pointer;
+}
+.body {
+  height: 100vh;
+  background-color: blueviolet;
+  overflow: scroll;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header-upper {
+  display: flex;
+  gap: 0.125rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 1.5rem;
+  background-color: #f2184f;
+  line-height: 1.5rem;
+}
+.header-upper a {
+  padding: 0 1rem;
+  border-right: 2px solid white;
+}
+.header-upper a:last-child {
+  border: none;
+}
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 4rem 0.5rem 2.5rem;
+}
+.logo-container-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo-container-left img {
+  border-radius: 3rem;
+  height: 150px;
+}
+.logo-container-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.logo-container-button-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.logo-container-button-section button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  color: white;
+  background: linear-gradient(to right, #252c45, #f0184f);
+  transition: all 1s ease;
+}
+.logo-container-button-section button:hover {
+  background: linear-gradient(to right, #f0184f, #252c45);
+}
+
+.logo-container-search-bar {
+  display: flex;
+}
+
+.logo-container-search-bar input,
+.logo-container-search-bar button {
+  padding: 0.8rem;
+}
+
+.logo-container-search-bar input {
+  border-radius: 0.5rem 0 0 0.5rem;
+  border-right: none;
+  outline: none;
+}
+.logo-container-search-bar button {
+  border-radius: 0 0.5rem 0.5rem 0;
+  border-left: none;
+}
+.navbar-outer-container {
+  position: sticky;
+  top: 0;
+  background-color: #202c45;
+  padding: 1.2rem 2rem;
+  display: flex;
+}
+.navbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  animation: growDown 500ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.nav-items {
+  padding: 0.8rem;
+  transition: all 0.7s ease;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  fill: white;
+  position: relative;
+}
+.nav-items:first-child {
+  background-color: white;
+  color: black;
+}
+.navbar .nav-items:hover:not(.admission-button, .nav-items:first-child) {
+  background-color: white;
+  border-radius: 1.1rem;
+  cursor: pointer;
+  color: black;
+  fill: black;
+}
+.drop-down-container {
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: -47px;
+  background-color: white;
+  padding: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+  width: 200px;
+  transition: all 1s ease;
+  animation: growDown 500ms ease-in-out forwards;
+  transform-origin: top center;
+  z-index: 222;
+}
+.navbar .nav-items:hover .drop-down-container {
+  display: flex;
+}
+.drop-down-container a {
+  color: black;
+}
+.admission-button {
+  background-color: #de1a4e;
+}
+.menu-bar {
+  display: none;
+  padding: 0.5rem;
+ 
+}
+.menu-bar div {
+  width: 35px;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  margin: 3px 0;
+}
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  70% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.main-backgroundimg {
+  background-image: url("https://ramjas.du.ac.in/college/web/images/bg/bg3.jpg");
+  height: 230px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inner-main-backgroundimg {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0 6rem;
+  height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.499);
+}
+.background-img-container-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.container {
+  display: flex;
+  padding: 3rem;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.container-left {
+  width: 30%;
+}
+.container-left ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+}
+.container-left ul h3 {
+  font-size: 1.5rem;
+  letter-spacing: 1rem;
+}
+.container-left ul hr {
+  width: 20%;
+}
+.container-left ul li {
+  padding: 0.5rem 1.2rem;
+  list-style: none;
+  background-color: #202c45;
+  border-right: 4px solid red;
+}
+
+.container-right {
+  width: 70%;
+  line-height: 1.5rem;
+  padding: 2rem 0.5rem 0.5rem 0.5rem;
+}
+.useful-link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(45deg, #de1a4e, #de1a4e, #262b45);
+}
+.useful-link-container h3 {
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+}
+.links-boxes {
+  display: flex;
+  gap: 5rem;
+  padding: 0.5rem 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.links-boxes div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.links-boxes div li {
+  list-style: "➢ ";
+  font-weight: bolder;
+}
+.links-boxes div li::marker {
+  color: white;
+}
+
+.list-inside-list-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+}
+
+.footer {
+  background-color: #141414;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 850px) {
+  .logo-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  .logo-container-left {
+    gap: 3rem;
+    letter-spacing: 1.5rem;
+  }
+  .logo-container-search-bar {
+    justify-content: center;
+  }
+  .logo-container div {
+    width: 100%;
+  }
+  .links-boxes {
+    justify-content: space-between;
+    padding: 0.5rem 4rem;
+  }
+  .navbar-outer-container {
+    flex-direction: column-reverse;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 0.2rem;
+    display: none;
+    width: 100%;
+  }
+
+  .nav-items {
+    width: 100%;
+    background-color: white;
+    color: black;
+    fill: black;
+  }
+  .admission-button {
+    background-color: #f0184f;
+    color: white;
+  }
+  .drop-down-container {
+    width: 100%;
+    text-align: center;
+    top: 40px;
+    left: 0;
+  }
+
+  .menu-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .container> div{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+  .logo-container-left img{
+    height: 80px;
+  }
+  .logo-container-left{
+letter-spacing: 4px;
+  }
+  
+}
