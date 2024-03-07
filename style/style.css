@@ -16,7 +16,7 @@ button {
 }
 .body {
   height: 100vh;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   overflow: scroll;
 }
 .header {
